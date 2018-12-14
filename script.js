@@ -3,7 +3,7 @@
 let answer = "";
 
 function getQuestion() {
-	let question = document.getElementById("question").value.toLowerCase();
+	let question = document.getElementById("question").value;
 	return capitalise(question);
 }
 
