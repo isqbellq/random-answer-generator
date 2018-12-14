@@ -11,10 +11,19 @@
 </head>
 <body>
 	<h1>RANDOM ANSWER GENERATOR</h1>
+	<hr class="hr-dark">
 
-	<input type="input" name="question" id="question" placeholder="Any questions?">
+	<input type="input" name="question" id="question" placeholder="Any questions?" autofocus onfocus="this.select()">
 	<button>?</button><br>
-	<textarea id="answer"></textarea>
+
+	<div class="results">
+		<p><i class="fas fa-question fa-2x"></i> You asked: 	
+		<div id="user-input"></div></p>
+	
+		<p><i class="fas fa-random fa-2x"></i> The answer is:
+		<div id="answer"></div></p>
+	</div>
+
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

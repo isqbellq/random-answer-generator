@@ -1,14 +1,19 @@
 "use strict"
 
-let randomNumber = Math.floor(Math.random() * 11);
 let answer = "";
 
 function getQuestion() {
-	let question = document.getElementById("question").value;
-	return question
+	let question = document.getElementById("question").value.toLowerCase();
+	return capitalise(question);
+}
+
+function capitalise(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function getAnswer() {
+	let randomNumber = Math.floor(Math.random() * 11);
+
 	switch(randomNumber) {
 		case 0:
 		answer = "Sure";
@@ -62,8 +67,18 @@ function getAnswer() {
 	return answer;
 }
 
-function printAnswer() {
-	document.getElementById("answer").value = "You asked: \"" + getQuestion() + "\". \n" + "The answer is: \"" + getAnswer() + "\".";
+function printResults() {
+	document.getElementById("user-input").innerHTML = getQuestion();
+	document.getElementById("answer").innerHTML = getAnswer() + ".";
+	window.scrollTo(0,document.body.scrollHeight);
 }
 
-document.getElementsByTagName("button")[0].addEventListener("click", printAnswer);
+document.getElementsByTagName("button")[0].addEventListener("click", printResults);
+
+document.addEventListener('keypress', function (e) {
+	let key = e.which || e.keyCode;
+
+	if (key === 13) {
+		printResults();
+	}
+});
