@@ -69,7 +69,10 @@ function getAnswer() {
 
 function printResults() {
 	document.getElementById("user-input").innerHTML = getQuestion();
-	document.getElementById("answer").innerHTML = getAnswer() + ".";
+
+	if (getQuestion() !== "" && getQuestion() !== " " && getQuestion() !== "  ") {
+		document.getElementById("answer").innerHTML = getAnswer() + ".";
+	}
 	window.scrollTo(0,document.body.scrollHeight);
 }
 
