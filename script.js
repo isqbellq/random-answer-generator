@@ -12,7 +12,7 @@ function capitalise(str) {
 }
 
 function getAnswer() {
-	let randomNumber = Math.floor(Math.random() * 11);
+	let randomNumber = Math.floor(Math.random() * 20);
 
 	switch(randomNumber) {
 		case 0:
@@ -40,10 +40,10 @@ function getAnswer() {
 		answer = "Nope, sorry";
 		break;
 		case 8:
-		answer = "Are you serious";
+		answer = "Are you serious?%!$! Obviously";
 		break;
 		case 9:
-		answer = "Why are you even asking";
+		answer = "Yeah, why are you even asking";
 		break;
 		case 10:
 		answer = "Hmmmmm, could be";
@@ -62,6 +62,21 @@ function getAnswer() {
 		break;
 		case 15:
 		answer = "Nah, don't even bother";
+		break;
+		case 16:
+		answer = "Very doubtful";
+		break;
+		case 17:
+		answer = "Without a doubt";
+		break;
+		case 18:
+		answer = "Definitely not";
+		break;
+		case 19:
+		answer = "Don't count on it";
+		break;
+		case 20:
+		answer = "Signs point to yes";
 		break;
 	}
 	return answer;
