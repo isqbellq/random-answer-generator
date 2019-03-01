@@ -58,8 +58,12 @@ button {
 	html, body {
 		font-size: 18px;
 	}
+	html {
+		padding: 0 15px;
+	}
 	input {
 		padding-left: 5px;
 		padding-right: 5px;
+		width: 50%;
 	}
 }
